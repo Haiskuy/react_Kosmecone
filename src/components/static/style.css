@@ -1,0 +1,240 @@
+/* font */
+@font-face {
+    font-family: balsamiq;
+    src: url(./font/BalsamiqSans-Regular.ttf);
+}
+
+@font-face {
+    font-family: balo;
+    src: url(./font/Baloo2-VariableFont_wght.ttf);
+}
+
+body {
+    font-family: balsamiq;
+}
+
+.balo {
+    font-family: balo;
+}
+
+/* ============================== */
+/* ============================== */
+/* ============================== */
+/* ============================== */
+/* ============================== */
+/* display none darkmode icon */
+.display-none {
+    display: none;
+}
+
+/* ============================== */
+/* ============================== */
+/* ============================== */
+/* ============================== */
+/* ============================== */
+/* style input comentar */
+.form__field {
+    border: none;
+    border-bottom: 2px solid #9b9b9b;
+    outline: 0;
+    width: 1000px;
+    padding: 7px 0;
+    transition: border-color 0.2s;
+}
+
+.form__field::placeholder {
+    color: transparent;
+}
+
+.form__field:placeholder-shown~.form__label {
+    font-size: 17px;
+    cursor: text;
+    top: 20px;
+}
+
+.form__label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 17px;
+    color: #9b9b9b;
+    pointer-events: none;
+}
+
+.form__field:focus {
+    padding-bottom: 6px;
+    font-weight: 700;
+    border-width: 3px;
+    border-image: linear-gradient(to right, #d4490e, #ee6124);
+    border-image-slice: 1;
+}
+
+.form__field:focus~.form__label {
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 17px;
+    color: #ff5947;
+    font-weight: 700;
+}
+
+/* reset input */
+.form__field:required,
+.form__field:invalid {
+    box-shadow: none;
+}
+
+
+/* ============================== */
+/* ============================== */
+/* ============================== */
+/* ============================== */
+/* ============================== */
+/* navbar */
+#menu {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(7.1px);
+    -webkit-backdrop-filter: blur(7.1px);
+    border: 1px solid rgba(0, 0, 0, 0.26);
+    color: #ffffff;
+    height: 52px;
+    padding-left: 18px;
+    border-radius: 0px;
+}
+
+#menu ul,
+#menu li {
+    margin: 0 auto;
+    padding: 0;
+    list-style: none
+}
+
+#menu ul {
+    width: 100%;
+}
+
+#menu li {
+    float: left;
+    display: inline;
+    position: relative;
+}
+
+#menu a {
+    display: block;
+    line-height: 52px;
+    text-decoration: none;
+    font-size: 16px;
+    text-transform: capitalize;
+}
+
+#menu a.dropdown-arrow:after {
+    content: "\25BE";
+    margin-left: 5px;
+}
+
+#menu input {
+    display: none;
+    margin: 0;
+    padding: 0;
+    height: 52px;
+    width: 15%;
+    opacity: 0;
+    cursor: pointer
+}
+
+#menu label {
+    display: none;
+    line-height: 52px;
+    text-align: center;
+    position: absolute;
+    left: 35px
+}
+
+#menu label:before {
+    font-size: 1.6em;
+    content: "\2261";
+    margin-left: 20px;
+}
+
+#menu ul.sub-menus {
+    height: auto;
+    overflow: hidden;
+    width: 170px;
+    background: #444444;
+    position: absolute;
+    z-index: 99;
+    display: none;
+}
+
+#menu ul.sub-menus li {
+    display: block;
+    width: 100%;
+}
+
+#menu ul.sub-menus a {
+    color: #FFFFFF;
+    font-size: 16px;
+}
+
+#menu li:hover ul.sub-menus {
+    display: block
+}
+
+
+
+@media screen and (max-width: 800px) {
+
+    #menu ul {
+        background: #111;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        left: 0;
+        z-index: 3;
+        height: auto;
+        display: none
+    }
+
+    #menu ul.sub-menus {
+        width: 100%;
+        position: static;
+    }
+
+    #menu ul.sub-menus a {
+        padding-left: 30px;
+    }
+
+    #menu li {
+        display: block;
+        float: none;
+        width: auto;
+    }
+
+    #menu input,
+    #menu label {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block
+    }
+
+    #menu input {
+        z-index: 4
+    }
+
+    #menu input:checked+label {
+        color: white
+    }
+
+    #menu input:checked+label:before {
+        content: "\00d7"
+    }
+
+    #menu input:checked~ul {
+        display: block
+    }
+}

@@ -1,0 +1,100 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+* {
+    margin: 0px;
+    padding: 0px;
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+
+
+.text-gradasi1 {
+    color: rgb(218, 62, 28);
+    color: linear-gradient(15deg, rgba(218, 62, 28, 1) 0%, rgba(255, 139, 54, 1) 64%);
+}
+
+.bg-gradasi1 {
+    background: rgb(218, 62, 28);
+    background: linear-gradient(15deg, rgba(218, 62, 28, 1) 0%, rgba(255, 139, 54, 1) 78%);
+}
+
+.bg-transparan {
+    background: rgba(255, 255, 255, 0.11);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(13.3px);
+    -webkit-backdrop-filter: blur(13.3px);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.bg-transparan1 {
+    background: rgba(0, 0, 0, 0.41);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(18.7px);
+    -webkit-backdrop-filter: blur(18.7px);
+    border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.bg-transparan2 {
+    background: rgba(255, 255, 255, 0.42);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(6.3px);
+    -webkit-backdrop-filter: blur(6.3px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.bg-apik {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+
+/* scroll bar style custom */
+::-webkit-scrollbar {
+    width: 15px;
+    background-color: #FC3535;
+
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #FC3535;
+    border-radius: 2px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: rgb(249, 242, 241);
+}
+
+/* slider */
+/* CSS untuk slider */
+
+.slider-wrapper {
+    transition: transform 0.3s ease-in-out;
+}
+
+.slider-item {
+    flex: 0 0 100%;
+
+}
+
+/* CSS untuk tombol navigasi */
+.slider-nav {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.slider-nav button {
+    background: #333;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
